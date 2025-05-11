@@ -14,6 +14,8 @@ function Experience({ experiences }) {
           <ul>
             {exp.responsibilities && exp.responsibilities.map((resp, i) => <li key={i}>{resp}</li>)}
           </ul>
+          {exp.teamSize && <p className="team-size"><strong>Team Size:</strong> {exp.teamSize}</p>}
+          {exp.techStack && <p className="tech-stack"><strong>Tech Stack:</strong> {exp.techStack}</p>}
         </div>
       ))}
     </section>

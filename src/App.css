@@ -26,6 +26,29 @@ code {
   border-radius: 8px;
 }
 
+/* About Me Section */
+.about-section {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.about-section h2 {
+  color: #007bff; /* Match header accent */
+  margin-bottom: 15px;
+  font-size: 1.8em;
+}
+
+.about-section p {
+  color: #555;
+  text-align: justify;
+  margin-bottom: 10px;
+}
+
+.about-section p:last-child {
+  margin-bottom: 0;
+}
+
 /* Header */
 .App-header {
   background-color: #007bff; /* Blue accent */
@@ -89,8 +112,19 @@ section h2 {
 }
 
 /* Experience Item */
-.experience-item {
-  margin-bottom: 20px;
+.experience-item ul li {
+  margin-bottom: 5px;
+}
+
+.experience-item .team-size,
+.experience-item .tech-stack {
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 10px;
+}
+
+.experience-item .tech-stack {
+  word-break: break-word; /* Ensures long tech stack lists don't break layout */
 }
 
 .experience-item h3 {
@@ -125,6 +159,25 @@ section h2 {
   border-radius: 4px;
   margin: 5px;
   font-size: 0.9em;
+}
+
+/* Technologies Section */
+.technologies-section {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-left: 4px solid #007bff;
+}
+
+.technologies-section h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.technologies-section p {
+  line-height: 1.6;
+  color: #555;
+  text-align: justify;
 }
 
 /* Education Section */
