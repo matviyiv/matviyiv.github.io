@@ -1,0 +1,206 @@
+/* General Reset & Body */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f4f7f6;
+  color: #333;
+  line-height: 1.6;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* App Container */
+.App {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Header */
+.App-header {
+  background-color: #007bff; /* Blue accent */
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px 8px 0 0;
+}
+
+.App-header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+.App-header p {
+  font-size: 1.2em;
+  margin: 5px 0 0;
+}
+
+/* Upload Section */
+.upload-section {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #e9ecef;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.upload-section label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.upload-section input[type="file"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Main Content & Sections */
+main {
+  padding: 20px 0;
+}
+
+section {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+section:last-child {
+  border-bottom: none;
+}
+
+section h2 {
+  color: #007bff;
+  margin-bottom: 15px;
+  font-size: 1.8em;
+}
+
+/* Experience Item */
+.experience-item {
+  margin-bottom: 20px;
+}
+
+.experience-item h3 {
+  margin: 0 0 5px 0;
+  font-size: 1.4em;
+}
+
+.experience-item p {
+  margin: 0 0 10px 0;
+  font-style: italic;
+  color: #555;
+}
+
+.experience-item ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  padding-left: 0;
+}
+
+/* Skills List */
+.skills-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skills-list li {
+  background-color: #007bff;
+  color: white;
+  padding: 8px 15px;
+  margin: 5px;
+  border-radius: 20px;
+  font-size: 0.9em;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 30px;
+  font-size: 0.9em;
+  color: #777;
+}
+
+/* PDF Text Debug (optional) */
+.pdf-text-debug {
+  margin-top: 30px;
+  padding: 15px;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  max-height: 300px;
+  overflow-y: auto;
+  text-align: left;
+}
+
+.pdf-text-debug pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-size: 0.8em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .App {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  .App-header h1 {
+    font-size: 2em;
+  }
+
+  .App-header p {
+    font-size: 1em;
+  }
+
+  section h2 {
+    font-size: 1.5em;
+  }
+
+  .experience-item h3 {
+    font-size: 1.2em;
+  }
+
+  .skills-list li {
+    padding: 6px 12px;
+    font-size: 0.85em;
+  }
+}
+
+@media (max-width: 480px) {
+  .App-header h1 {
+    font-size: 1.8em;
+  }
+
+  .App-header p {
+    font-size: 0.9em;
+  }
+
+  section h2 {
+    font-size: 1.3em;
+  }
+
+  .experience-item h3 {
+    font-size: 1.1em;
+  }
+
+  .upload-section input[type="file"] {
+    width: 90%;
+  }
+}
