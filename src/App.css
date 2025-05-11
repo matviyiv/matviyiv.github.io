@@ -119,12 +119,88 @@ section h2 {
 }
 
 .skills-list li {
-  background-color: #007bff;
-  color: white;
-  padding: 8px 15px;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  border-radius: 4px;
   margin: 5px;
-  border-radius: 20px;
   font-size: 0.9em;
+}
+
+/* Education Section */
+.education-section {
+  margin-bottom: 20px;
+}
+
+.education-item {
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.education-item h3 {
+  margin-top: 0;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.education-institution {
+  font-style: italic;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.education-duration {
+  font-size: 0.9em;
+  color: #777;
+  margin-bottom: 5px;
+}
+
+.education-field {
+  font-size: 0.9em;
+  color: #555;
+  margin-bottom: 0;
+}
+
+/* Links Section */
+.links-section {
+  margin-bottom: 20px;
+}
+
+.links-list {
+  list-style: none;
+  padding: 0;
+}
+
+.links-list li {
+  margin-bottom: 8px;
+}
+
+.links-list a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.links-list a:hover {
+  text-decoration: underline;
+}
+
+/* Languages Section */
+.languages-section {
+  margin-bottom: 20px;
+}
+
+.languages-list {
+  list-style: none;
+  padding: 0;
+}
+
+.languages-list li {
+  margin-bottom: 8px;
+  font-size: 0.95em;
 }
 
 /* Footer */
@@ -134,6 +210,7 @@ footer {
   margin-top: 30px;
   font-size: 0.9em;
   color: #777;
+  border-top: 1px solid #eee;
 }
 
 /* PDF Text Debug (optional) */
