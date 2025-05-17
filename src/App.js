@@ -8,6 +8,8 @@ import Links from './components/Links';
 import Languages from './components/Languages';
 import Technologies from './components/Technologies';
 import About from './components/About';
+import AnimatedSection from './components/AnimatedSection';
+import SocialIcons from './components/SocialIcons';
 
 function App() {
   const startYear = 2010;
@@ -106,10 +108,12 @@ function App() {
       }
     ],
     links: [
-      { name: 'LinkedIn', url: 'https://www.linkedin.com/in/nazar-matviyiv-0b15b925' },
-      { name: 'GitHub', url: 'https://github.com/matviyiv/' },
-      { name: 'Medium', url: 'https://medium.com/@nazarmatviyiv' },
-      { name: 'My Blog', url: 'http://jsgags.blogspot.com/' }
+      { name: 'linkedin', title: 'LinkedIn', url: 'https://linkedin.com/in/nazarmatviyiv' },
+      { name: 'github', title: 'GitHub', url: 'https://github.com/matviyiv' },
+      { name: 'twitter', title: 'Twitter', url: 'https://twitter.com/matviyiv' },
+      { name: 'website', title: 'Personal Website', url: 'https://matviyiv.github.io' },
+      { name: 'medium', title: 'Medium', url: 'https://medium.com/@nazarmatviyiv' },
+      { name: 'blog', title: 'My Blog', url: 'http://jsgags.blogspot.com/' }
     ],
     languages: [
       { name: 'English', proficiency: 'Proficient Working' },
@@ -123,17 +127,29 @@ function App() {
     <div className="App">
       <Header name={resumeData.name} title={resumeData.title} />
       <main>
-        <About text={resumeData.aboutMe} />
-        <Experience experiences={resumeData.experiences} />
-        <Skills skills={resumeData.skills} />
-        <Technologies text={resumeData.technologiesOverview} />
-        <Education educationItems={resumeData.education} />
-        <Links links={resumeData.links} />
-        <Languages languages={resumeData.languages} />
+        <AnimatedSection>
+          <About text={resumeData.aboutMe} />
+        </AnimatedSection>
+        <AnimatedSection>
+          <Experience experiences={resumeData.experiences} />
+        </AnimatedSection>
+        <AnimatedSection>
+          <Skills skills={resumeData.skills} />
+        </AnimatedSection>
+        <AnimatedSection>
+          <Technologies technologiesOverview={resumeData.technologiesOverview} />
+        </AnimatedSection>
+        <AnimatedSection>
+          <Education education={resumeData.education} />
+        </AnimatedSection>
+        <AnimatedSection>
+          <Languages languages={resumeData.languages} />
+        </AnimatedSection>
+        <AnimatedSection>
+          <Links links={resumeData.links} />
+        </AnimatedSection>
       </main>
-      <footer>
-        <p>Powered by React</p>
-      </footer>
+      <SocialIcons links={resumeData.links} />
     </div>
   );
 }

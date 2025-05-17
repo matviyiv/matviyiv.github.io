@@ -1,4 +1,5 @@
 import React from 'react';
+import AnimatedExperienceItem from './AnimatedExperienceItem';
 
 function Experience({ experiences }) {
   if (!experiences || experiences.length === 0) {
@@ -8,15 +9,17 @@ function Experience({ experiences }) {
     <section>
       <h2>Experience</h2>
       {experiences.map((exp, index) => (
-        <div key={index} className="experience-item">
-          <h3>{exp.title} at {exp.company}</h3>
-          <p>{exp.duration}</p>
-          <ul>
-            {exp.responsibilities && exp.responsibilities.map((resp, i) => <li key={i}>{resp}</li>)}
-          </ul>
-          {exp.teamSize && <p className="team-size"><strong>Team Size:</strong> {exp.teamSize}</p>}
-          {exp.techStack && <p className="tech-stack"><strong>Tech Stack:</strong> {exp.techStack}</p>}
-        </div>
+        <AnimatedExperienceItem key={index}>
+          <div className="experience-item">
+            <h3>{exp.title} at {exp.company}</h3>
+            <p>{exp.duration}</p>
+            <ul>
+              {exp.responsibilities && exp.responsibilities.map((resp, i) => <li key={i}>{resp}</li>)}
+            </ul>
+            {exp.teamSize && <p className="team-size"><strong>Team Size:</strong> {exp.teamSize}</p>}
+            {exp.techStack && <p className="tech-stack"><strong>Tech Stack:</strong> {exp.techStack}</p>}
+          </div>
+        </AnimatedExperienceItem>
       ))}
     </section>
   );

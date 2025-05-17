@@ -1,3 +1,5 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
 /* General Reset & Body */
 body {
   margin: 0;
@@ -31,6 +33,7 @@ code {
   margin-bottom: 30px;
   padding-bottom: 20px;
   border-bottom: 1px solid #eee;
+  position: relative;
 }
 
 .about-section h2 {
@@ -47,6 +50,130 @@ code {
 
 .about-section p:last-child {
   margin-bottom: 0;
+}
+
+/* Social Icons */
+.social-fab {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 1000;
+  background: #007bff;
+  color: white;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  transform: rotate(0deg);
+  pointer-events: auto;
+}
+
+.social-fab:hover {
+  transform: rotate(45deg);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.social-fab.open {
+  transform: rotate(45deg);
+}
+
+.social-fab i {
+  font-size: 24px;
+  transition: transform 0.3s ease;
+}
+
+.social-fab.open i {
+  transform: rotate(-45deg);
+}
+
+.social-icons-container {
+  position: fixed;
+  bottom: 90px;
+  right: 40px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  pointer-events: auto;
+}
+
+.social-icons-container.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Ensure the FAB stays fixed during scrolling */
+body {
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Prevent scrolling issues with fixed elements */
+.social-icons {
+  position: relative;
+  z-index: 1000;
+}
+
+.social-icon {
+  background: white;
+  color: #007bff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.social-icon:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .social-fab {
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .social-fab i {
+    font-size: 20px;
+  }
+
+  .social-icons-container {
+    bottom: 80px;
+    right: 25px;
+    gap: 5px;
+  }
+
+  .social-icon {
+    width: 35px;
+    height: 35px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+
+  .social-icon:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  }
 }
 
 /* Header */
@@ -258,12 +385,60 @@ section h2 {
 
 /* Footer */
 footer {
-  text-align: center;
-  padding: 20px 0;
-  margin-top: 30px;
-  font-size: 0.9em;
-  color: #777;
-  border-top: 1px solid #eee;
+  background-color: #007bff;
+  color: white;
+  padding: 30px 20px;
+  margin-top: 40px;
+}
+
+footer h2 {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+}
+
+.links-section {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.links-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.links-list li {
+  display: flex;
+  align-items: center;
+}
+
+.links-list a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.links-list a:hover {
+  color: #ffffffdd;
+}
+
+.links-list a::after {
+  content: '•';
+  margin-left: 5px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.links-list a:last-child::after {
+  content: '';
 }
 
 /* PDF Text Debug (optional) */
