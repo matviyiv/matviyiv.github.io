@@ -10,6 +10,7 @@ import Technologies from './components/Technologies';
 import About from './components/About';
 import AnimatedSection from './components/AnimatedSection';
 import SocialIcons from './components/SocialIcons';
+import SEO from './components/SEO';
 
 function App() {
   const startYear = 2010;
@@ -19,7 +20,7 @@ function App() {
   // eslint-disable-next-line no-unused-vars
   const [resumeData, setResumeData] = useState({
     name: 'Nazar Matviyiv',
-    title: 'Lead JavaScript Developer at Teletronics',
+    title: 'Lead Full Stack Developer',
     aboutMe: `I have over ${yearsOfExperience} years of experience in IT industry. I have considerable knowledge and experience in enterprise software along with understanding all development stages from idea to product delivery. Personal trails: self-directed, results oriented, dependable, problem solver, attention to detail, self-improvement.\n\nI want to make a meaningful impact on the product’s architecture and evolution. I am fond of solving algorithmic problems, writing code, and building products. Web-scale applications that involve operations, research and optimization. I am attracted by the opportunity to earn equity to the business. Using logic and reason to identify the strengths and weaknesses of alternative solutions, conclusions or approaches to problems.`,
     experiences: [
       {
@@ -124,6 +125,7 @@ function App() {
 
   return (
     <div className="App">
+      <SEO />
       <Header name={resumeData.name} title={resumeData.title} />
       <main>
         <AnimatedSection>

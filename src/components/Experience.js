@@ -3,24 +3,34 @@ import AnimatedExperienceItem from './AnimatedExperienceItem';
 
 function Experience({ experiences }) {
   if (!experiences || experiences.length === 0) {
-    return <p>No experience data available.</p>;
+    return null;
   }
+
   return (
-    <section>
+    <section id="experience" className="experience-section">
       <h2>Experience</h2>
-      {experiences.map((exp, index) => (
-        <AnimatedExperienceItem key={index}>
-          <div className="experience-item">
-            <h3>{exp.title} at {exp.company}</h3>
-            <p>{exp.duration}</p>
-            <ul>
-              {exp.responsibilities && exp.responsibilities.map((resp, i) => <li key={i}>{resp}</li>)}
-            </ul>
-            {exp.teamSize && <p className="team-size"><strong>Team Size:</strong> {exp.teamSize}</p>}
-            {exp.techStack && <p className="tech-stack"><strong>Tech Stack:</strong> {exp.techStack}</p>}
-          </div>
-        </AnimatedExperienceItem>
-      ))}
+      <div className="experiences-list">
+        {experiences.map((exp, index) => (
+          <AnimatedExperienceItem key={index}>
+            <div className="experience-item">
+              <h3>{exp.title}</h3>
+              <p className="company">{exp.company}</p>
+              <p className="duration">{exp.duration}</p>
+              <ul className="responsibilities">
+                {exp.responsibilities.map((resp, respIndex) => (
+                  <li key={respIndex}>{resp}</li>
+                ))}
+              </ul>
+              {exp.techStack && (
+                <div className="tech-stack">
+                  <h4>Tech Stack</h4>
+                  <p>{exp.techStack}</p>
+                </div>
+              )}
+            </div>
+          </AnimatedExperienceItem>
+        ))}
+      </div>
     </section>
   );
 }

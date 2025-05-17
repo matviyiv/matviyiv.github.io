@@ -5,7 +5,7 @@ function Technologies({ text }) {
     return null;
   }
   return (
-    <section className="technologies-section">
+    <section id="technologies" className="technologies-section">
       <h2>Technologies</h2>
       <p>{text}</p>
     </section>

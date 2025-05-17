@@ -5,7 +5,7 @@ function Languages({ languages }) {
     return null;
   }
   return (
-    <section className="languages-section">
+    <section id="languages" className="languages-section">
       <h2>Languages</h2>
       <ul className="languages-list">
         {languages.map((lang, index) => (

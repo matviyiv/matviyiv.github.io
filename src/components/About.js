@@ -6,11 +6,10 @@ function About({ text }) {
   }
 
   // Split the text into paragraphs based on double line breaks
-  const paragraphs = text.split(/\n\s*\n/);
+  const paragraphs = text.split('\n\n');
 
   return (
-    <section className="about-section">
-      <h2>About Me</h2>
+    <section id="about" className="about-section">
       {paragraphs.map((paragraph, index) => (
         <p key={index}>{paragraph}</p>
       ))}

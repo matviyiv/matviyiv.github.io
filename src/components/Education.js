@@ -2,19 +2,22 @@ import React from 'react';
 
 function Education({ education }) {
   if (!education || education.length === 0) {
-    return <p>No education data available.</p>;
+    return null;
   }
+
   return (
-    <section className="education-section">
+    <section id="education" className="education-section">
       <h2>Education</h2>
-      {education.map((edu, index) => (
-        <div key={index} className="education-item">
-          <h3>{edu.degree}</h3>
-          <p className="education-institution">{edu.institution}</p>
-          <p className="education-duration">{edu.duration}</p>
-          {edu.field && <p className="education-field">Field: {edu.field}</p>}
-        </div>
-      ))}
+      <div className="education-list">
+        {education.map((edu, index) => (
+          <div key={index} className="education-item">
+            <h3>{edu.degree}</h3>
+            <p className="institution">{edu.institution}</p>
+            <p className="duration">{edu.duration}</p>
+            {edu.description && <p className="description">{edu.description}</p>}
+          </div>
+        ))}
+      </div>
     </section>
   );
 }
