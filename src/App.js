@@ -111,7 +111,6 @@ function App() {
       { name: 'linkedin', title: 'LinkedIn', url: 'https://linkedin.com/in/nazarmatviyiv' },
       { name: 'github', title: 'GitHub', url: 'https://github.com/matviyiv' },
       { name: 'twitter', title: 'Twitter', url: 'https://twitter.com/matviyiv' },
-      { name: 'website', title: 'Personal Website', url: 'https://matviyiv.github.io' },
       { name: 'medium', title: 'Medium', url: 'https://medium.com/@nazarmatviyiv' },
       { name: 'blog', title: 'My Blog', url: 'http://jsgags.blogspot.com/' }
     ],
@@ -137,7 +136,7 @@ function App() {
           <Skills skills={resumeData.skills} />
         </AnimatedSection>
         <AnimatedSection>
-          <Technologies technologiesOverview={resumeData.technologiesOverview} />
+          <Technologies text={resumeData.technologiesOverview} />
         </AnimatedSection>
         <AnimatedSection>
           <Education education={resumeData.education} />

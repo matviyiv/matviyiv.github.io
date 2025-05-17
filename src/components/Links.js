@@ -7,7 +7,6 @@ function Links({ links }) {
   return (
     <footer>
       <div className="links-section">
-        <h2>Connect with me</h2>
         <ul className="links-list">
           {links.map((link, index) => (
             <li key={index}>
