@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import './App.css';
+import './index.css';
+import './tailwind.css';
 import Header from './components/Header';
 import Experience from './components/Experience';
 import Skills from './components/Skills';
@@ -9,13 +10,16 @@ import Languages from './components/Languages';
 import Technologies from './components/Technologies';
 import About from './components/About';
 import AnimatedSection from './components/AnimatedSection';
-import SocialIcons from './components/SocialIcons';
+
 import SEO from './components/SEO';
 
 function App() {
   const startYear = 2010;
   const currentYear = new Date().getFullYear();
   const yearsOfExperience = currentYear - startYear;
+
+  // Test Tailwind
+  const testClasses = 'bg-blue-500 text-white p-4 rounded-lg';
 
   // eslint-disable-next-line no-unused-vars
   const [resumeData, setResumeData] = useState({
@@ -127,7 +131,7 @@ function App() {
     <div className="App">
       <SEO />
       <Header name={resumeData.name} title={resumeData.title} />
-      <main>
+      <main className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection>
           <About text={resumeData.aboutMe} />
         </AnimatedSection>
@@ -146,11 +150,8 @@ function App() {
         <AnimatedSection>
           <Languages languages={resumeData.languages} />
         </AnimatedSection>
-        <AnimatedSection>
-          <Links links={resumeData.links} />
-        </AnimatedSection>
+        <Links links={resumeData.links} />
       </main>
-      <SocialIcons links={resumeData.links} />
     </div>
   );
 }

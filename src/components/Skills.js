@@ -5,11 +5,15 @@ function Skills({ skills }) {
     return <p>No skills data available.</p>;
   }
   return (
-    <section id="skills">
-      <h2>Skills</h2>
-      <ul className="skills-list">
-        {skills.map((skill, index) => <li key={index}>{skill}</li>)}
-      </ul>
+    <section id="skills" className="py-12">
+      <h2 className="section-title">Skills</h2>
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-6">
+        {skills.map((skill, index) => (
+          <span key={index} className="skill-tag">
+            {skill}
+          </span>
+        ))}
+      </div>
     </section>
   );
 }

@@ -5,9 +5,11 @@ function Technologies({ text }) {
     return null;
   }
   return (
-    <section id="technologies" className="technologies-section">
-      <h2>Technologies</h2>
-      <p>{text}</p>
+    <section id="technologies" className="py-12">
+      <h2 className="section-title">Technologies</h2>
+      <div className="education-card bg-white rounded-lg shadow-md p-6">
+        {text}
+      </div>
     </section>
   );
 }

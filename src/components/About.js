@@ -9,10 +9,17 @@ function About({ text }) {
   const paragraphs = text.split('\n\n');
 
   return (
-    <section id="about" className="about-section">
-      {paragraphs.map((paragraph, index) => (
-        <p key={index}>{paragraph}</p>
-      ))}
+    <section id="about" className="py-12">
+      <h2 className="section-title">About Me</h2>
+      <div className="education-card bg-white rounded-lg shadow-md p-6">
+        <div className="prose prose-lg max-w-none">
+          {paragraphs.map((paragraph, index) => (
+            <p key={index} className="text-gray-700 leading-relaxed">
+              {paragraph}
+            </p>
+          ))}
+        </div>
+      </div>
     </section>
   );
 }
