@@ -18,11 +18,7 @@ function App() {
   const currentYear = new Date().getFullYear();
   const yearsOfExperience = currentYear - startYear;
 
-  // Test Tailwind
-  const testClasses = 'bg-blue-500 text-white p-4 rounded-lg';
-
-  // eslint-disable-next-line no-unused-vars
-  const [resumeData, setResumeData] = useState({
+  const [resumeData] = useState({
     name: 'Nazar Matviyiv',
     title: 'Lead Full Stack Developer',
     aboutMe: `I have over ${yearsOfExperience} years of experience in IT industry. I have considerable knowledge and experience in enterprise software along with understanding all development stages from idea to product delivery. Personal trails: self-directed, results oriented, dependable, problem solver, attention to detail, self-improvement.\n\nI want to make a meaningful impact on the product’s architecture and evolution. I am fond of solving algorithmic problems, writing code, and building products. Web-scale applications that involve operations, research and optimization. I am attracted by the opportunity to earn equity to the business. Using logic and reason to identify the strengths and weaknesses of alternative solutions, conclusions or approaches to problems.`,
