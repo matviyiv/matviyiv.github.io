@@ -1,9 +1,13 @@
 name: Deploy to GitHub Pages
 
+# IMPORTANT: This workflow ONLY deploys from the main/master branch
+# This ensures only production-ready code is deployed to GitHub Pages
 on:
   push:
-    branches: [ main ]
-  workflow_dispatch:
+    branches:
+      - main
+      - master  # Fallback if repository uses master instead of main
+  workflow_dispatch:  # Allows manual deployment from GitHub UI (still respects branch protection)
 
 permissions:
   contents: read
@@ -17,9 +21,19 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    # Only run if branch is main or master
+    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Verify branch
+        run: |
+          echo "Deploying from branch: ${GITHUB_REF#refs/heads/}"
+          if [[ "${GITHUB_REF#refs/heads/}" != "main" && "${GITHUB_REF#refs/heads/}" != "master" ]]; then
+            echo "ERROR: Deployment only allowed from main or master branch"
+            exit 1
+          fi
 
       - name: Setup Node.js
         uses: actions/setup-node@v4

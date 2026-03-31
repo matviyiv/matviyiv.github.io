@@ -1,10 +1,17 @@
 name: CI
 
+# Run tests and linting on:
+# - Pushes to main/master (production branches)
+# - All pull requests to main/master
 on:
   push:
-    branches: [ main, develop ]
+    branches:
+      - main
+      - master
   pull_request:
-    branches: [ main, develop ]
+    branches:
+      - main
+      - master
 
 jobs:
   test-and-build:
