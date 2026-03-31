@@ -1,0 +1,14 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo "Running pre-push checks..."
+
+# Run tests
+echo "Running tests..."
+npm test -- --passWithNoTests --watchAll=false
+
+# Run linter (build includes linting)
+echo "Running linter..."
+npm run build
+
+echo "Pre-push checks passed!"

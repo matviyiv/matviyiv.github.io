@@ -4,6 +4,7 @@ const AnimatedSection = ({ children }) => {
   const sectionRef = useRef(null);
 
   useEffect(() => {
+    const currentElement = sectionRef.current;
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -16,16 +17,16 @@ const AnimatedSection = ({ children }) => {
       { threshold: 0.1 }
     );
 
-    if (sectionRef.current) {
-      sectionRef.current.style.opacity = '0';
-      sectionRef.current.style.transform = 'translateY(40px)';
-      sectionRef.current.style.transition = 'opacity 1s ease-out, transform 1s ease-out 0.2s';
-      observer.observe(sectionRef.current);
+    if (currentElement) {
+      currentElement.style.opacity = '0';
+      currentElement.style.transform = 'translateY(40px)';
+      currentElement.style.transition = 'opacity 1s ease-out, transform 1s ease-out 0.2s';
+      observer.observe(currentElement);
     }
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (currentElement) {
+        observer.unobserve(currentElement);
       }
     };
   }, []);
