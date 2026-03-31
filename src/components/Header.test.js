@@ -39,7 +39,7 @@ describe('Header Component - Render Tests', () => {
     const { container } = render(<Header name="Test" title="Test Title" />);
 
     const header = container.querySelector('header');
-    expect(header).toHaveClass('bg-gradient-to-r');
+    expect(header).toHaveClass('bg-gradient-to-br');
     expect(header).toHaveClass('text-white');
   });
 });
