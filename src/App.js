@@ -124,10 +124,10 @@ function App() {
   });
 
   return (
-    <div className="App">
+    <div className="App min-h-screen bg-slate-950">
       <SEO />
       <Header name={resumeData.name} title={resumeData.title} />
-      <main className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+      <main className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <AnimatedSection>
           <About text={resumeData.aboutMe} />
         </AnimatedSection>

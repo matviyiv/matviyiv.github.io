@@ -11,10 +11,10 @@ function About({ text }) {
   return (
     <section id="about" className="py-12">
       <h2 className="section-title">About Me</h2>
-      <div className="education-card bg-white rounded-lg shadow-md p-6">
+      <div className="glass-card p-8 border-l-4 border-cyan-500">
         <div className="prose prose-lg max-w-none">
           {paragraphs.map((paragraph, index) => (
-            <p key={index} className="text-gray-700 leading-relaxed">
+            <p key={index} className="text-slate-300 leading-relaxed text-lg mb-4">
               {paragraph}
             </p>
           ))}
