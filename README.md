@@ -1,70 +1,131 @@
-# Getting Started with Create React App
+# Nazar Matviyiv - Resume
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![CI](https://github.com/matviyiv/matviyiv.github.io/actions/workflows/ci.yml/badge.svg)](https://github.com/matviyiv/matviyiv.github.io/actions/workflows/ci.yml)
+[![Deploy](https://github.com/matviyiv/matviyiv.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/matviyiv/matviyiv.github.io/actions/workflows/deploy.yml)
+[![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/StandWithUkraine.svg)](https://stand-with-ukraine.pp.ua)
 
-## Available Scripts
+> Modern, hi-tech resume website built with React, featuring a dark theme with AI-inspired design elements.
 
-In the project directory, you can run:
+## 🌐 Live Site
+
+Visit the live site at: [https://matviyiv.github.io](https://matviyiv.github.io)
+
+## ✨ Features
+
+- **Modern Dark Theme**: Hi-tech design with gradient effects and glass-morphism
+- **Responsive Design**: Works seamlessly on all devices
+- **Animated Components**: Smooth scroll animations and interactive elements
+- **SEO Optimized**: Meta tags and structured data for better discoverability
+- **Tested & Validated**: 20 unit tests with pre-commit/pre-push hooks
+- **CI/CD Pipeline**: Automated testing and deployment via GitHub Actions
+
+## 🚀 Quick Start
+
+### Prerequisites
+
+- Node.js 18.x or 20.x
+- npm or yarn
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/matviyiv/matviyiv.github.io.git
+cd matviyiv.github.io
+
+# Install dependencies
+npm install
+
+# Start development server
+npm start
+```
+
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+## 📜 Available Scripts
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Runs the app in development mode. The page will reload when you make changes.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner in interactive watch mode. All tests must pass before commits.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Builds the app for production to the `build` folder with optimized performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### `npm run deploy`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Builds and deploys the app to GitHub Pages (manual deployment).
 
-### `npm run eject`
+## 🧪 Testing
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The project includes comprehensive test coverage:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **20 unit tests** covering components and user interactions
+- **Pre-commit hook**: Runs tests before each commit
+- **Pre-push hook**: Runs tests and build before each push
+- **CI Pipeline**: Tests run on Node.js 18.x and 20.x
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+# Run tests once
+npm test -- --watchAll=false
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# Run tests with coverage
+npm test -- --coverage
+```
 
-## Learn More
+## 🎨 Design
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Modern dark theme with:
+- Glass-morphism cards with backdrop blur
+- Animated gradient backgrounds
+- Neon glow effects
+- Interactive hover states
+- Custom animations (gradient, float, glow)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🛠️ Tech Stack
 
-### Code Splitting
+- **React 19.1** - UI framework
+- **Tailwind CSS 3.4** - Styling
+- **FontAwesome** - Icons
+- **React Helmet** - SEO meta tags
+- **Jest + Testing Library** - Testing
+- **Husky** - Git hooks
+- **GitHub Actions** - CI/CD
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 📦 Project Structure
 
-### Analyzing the Bundle Size
+```
+src/
+├── components/          # React components
+│   ├── Header.js       # Header with animated gradients
+│   ├── Experience.js   # Work experience section
+│   ├── Skills.js       # Skills with interactive tags
+│   ├── Education.js    # Education section
+│   └── ...
+├── App.js              # Main application
+├── index.css           # Global styles and theme
+└── setupTests.js       # Test configuration
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🔒 Security
 
-### Making a Progressive Web App
+- Deployment restricted to `main`/`master` branch only
+- Multi-layer branch verification in CI/CD
+- Pre-commit/pre-push hooks prevent bad code
+- All external links use `noopener noreferrer`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 📝 License
 
-### Advanced Configuration
+This project is open source and available under the MIT License.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🇺🇦 Support Ukraine
 
-### Deployment
+[![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg)](https://stand-with-ukraine.pp.ua)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Built with ❤️ by [Nazar Matviyiv](https://github.com/matviyiv)
