@@ -1,16 +1,12 @@
 import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './index.css';
 import './tailwind.css';
 import Header from './components/Header';
-import Experience from './components/Experience';
-import Skills from './components/Skills';
-import Education from './components/Education';
 import Links from './components/Links';
-import Languages from './components/Languages';
-import Technologies from './components/Technologies';
-import About from './components/About';
-import AnimatedSection from './components/AnimatedSection';
-
+import Navigation from './components/Navigation';
+import Resume from './pages/Resume';
+import Articles from './pages/Articles';
 import SEO from './components/SEO';
 
 function App() {
@@ -124,31 +120,20 @@ function App() {
   });
 
   return (
-    <div className="App min-h-screen bg-slate-950">
-      <SEO />
-      <Header name={resumeData.name} title={resumeData.title} />
-      <main className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <AnimatedSection>
-          <About text={resumeData.aboutMe} />
-        </AnimatedSection>
-        <AnimatedSection>
-          <Experience experiences={resumeData.experiences} />
-        </AnimatedSection>
-        <AnimatedSection>
-          <Skills skills={resumeData.skills} />
-        </AnimatedSection>
-        <AnimatedSection>
-          <Technologies text={resumeData.technologiesOverview} />
-        </AnimatedSection>
-        <AnimatedSection>
-          <Education education={resumeData.education} />
-        </AnimatedSection>
-        <AnimatedSection>
-          <Languages languages={resumeData.languages} />
-        </AnimatedSection>
+    <Router>
+      <div className="App min-h-screen bg-slate-950">
+        <SEO />
+        <Header name={resumeData.name} title={resumeData.title} />
+        <Navigation />
+        <main>
+          <Routes>
+            <Route path="/" element={<Resume resumeData={resumeData} />} />
+            <Route path="/articles" element={<Articles />} />
+          </Routes>
+        </main>
         <Links links={resumeData.links} />
-      </main>
-    </div>
+      </div>
+    </Router>
   );
 }
 
