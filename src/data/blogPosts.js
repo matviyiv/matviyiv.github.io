@@ -4,12 +4,12 @@ const blogPosts = [
     id: 1,
     slug: 'mcp-server-local-llm',
     title: 'MCP server for local LLM',
-    subtitle: 'Building a Model Context Protocol server to connect local language models with modern development tools',
+    subtitle: 'Building a fully offline MCP server with Node.js, Redis, and LMStudio running Qwen 3.5 35B on M2 Mac',
     author: 'Nazar Matviyiv',
     date: '2026-04-01',
-    readTime: 8,
-    tags: ['MCP', 'LLM', 'AI', 'Python', 'Development'],
-    excerpt: 'Learn how to build and deploy a Model Context Protocol (MCP) server that enables seamless integration between local LLMs and your development environment. This guide covers architecture, implementation, and best practices.',
+    readTime: 12,
+    tags: ['MCP', 'LLM', 'Node.js', 'Redis', 'LMStudio', 'Offline'],
+    excerpt: 'How I built a Model Context Protocol server running completely offline with Redis storage, LMStudio, and performance tuning for M2 Mac. Includes real configuration details, overheating warnings, and lessons learned from running a 35B model locally.',
     coverImage: null, // optional
     published: true
   }
