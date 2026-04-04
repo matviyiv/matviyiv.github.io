@@ -7,6 +7,7 @@ import Links from './components/Links';
 import Navigation from './components/Navigation';
 import Resume from './pages/Resume';
 import Articles from './pages/Articles';
+import BlogPost from './pages/BlogPost';
 import SEO from './components/SEO';
 
 function App() {
@@ -129,6 +130,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Resume resumeData={resumeData} />} />
             <Route path="/articles" element={<Articles />} />
+            <Route path="/articles/:slug" element={<BlogPost />} />
           </Routes>
         </main>
         <Links links={resumeData.links} />
