@@ -126,17 +126,14 @@ function BlogPost() {
         </AnimatedSection>
 
         {/* Article Content - Medium-like typography */}
-        <AnimatedSection>
-          <div className="blog-content text-slate-300 leading-relaxed">
-            {ContentComponent ? <ContentComponent /> : (
-              <p className="text-slate-400 italic">Content coming soon...</p>
-            )}
-          </div>
-        </AnimatedSection>
+        <div className="blog-content text-slate-300 leading-relaxed">
+          {ContentComponent ? <ContentComponent /> : (
+            <p className="text-slate-400 italic">Content coming soon...</p>
+          )}
+        </div>
 
         {/* Footer - Share/Navigation */}
-        <AnimatedSection>
-          <footer className="mt-16 pt-8 border-t border-slate-700/50">
+        <footer className="mt-16 pt-8 border-t border-slate-700/50">
             <div className="flex justify-between items-center">
               <Link
                 to="/articles"
@@ -158,7 +155,6 @@ function BlogPost() {
               </div>
             </div>
           </footer>
-        </AnimatedSection>
       </article>
     </div>
   );
