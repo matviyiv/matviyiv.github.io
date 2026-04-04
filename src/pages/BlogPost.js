@@ -127,12 +127,10 @@ function BlogPost() {
 
         {/* Article Content - Medium-like typography */}
         <AnimatedSection>
-          <div className="prose prose-lg prose-invert max-w-none">
-            <div className="blog-content text-slate-300 leading-relaxed">
-              {ContentComponent ? <ContentComponent /> : (
-                <p className="text-slate-400 italic">Content coming soon...</p>
-              )}
-            </div>
+          <div className="blog-content text-slate-300 leading-relaxed">
+            {ContentComponent ? <ContentComponent /> : (
+              <p className="text-slate-400 italic">Content coming soon...</p>
+            )}
           </div>
         </AnimatedSection>
 
