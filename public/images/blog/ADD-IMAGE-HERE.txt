@@ -1,0 +1,29 @@
+📸 Add Your MCP Cover Image Here
+
+To complete the setup:
+
+1. Save your Dubai cityscape image (the foggy one) as:
+   mcp-server-cover.jpg
+
+2. Place it in this directory:
+   /public/images/blog/mcp-server-cover.jpg
+
+3. The image will automatically appear at the top of your MCP article
+
+Image specifications:
+- Format: JPEG (for better compression)
+- Recommended width: 1600-2000px
+- Quality: 80-85% (balance between quality and file size)
+- The image will be displayed at 80% of screen width
+- Lazy loading is enabled for fast page load
+
+Performance features already implemented:
+✅ Lazy loading (loading="lazy")
+✅ Async decoding (decoding="async")
+✅ Content visibility optimization
+✅ Smooth fade-in animation
+✅ Layout shift prevention
+✅ Shadow and border styling
+
+Your current image path is set to:
+/images/blog/mcp-server-cover.jpg

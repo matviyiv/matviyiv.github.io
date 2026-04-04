@@ -10,7 +10,7 @@ const blogPosts = [
     readTime: 12,
     tags: ['MCP', 'LLM', 'Node.js', 'Redis', 'LMStudio', 'Offline'],
     excerpt: 'How I built a Model Context Protocol server running completely offline with Redis storage, LMStudio, and performance tuning for M2 Mac. Includes real configuration details, overheating warnings, and lessons learned from running a 35B model locally.',
-    coverImage: null, // optional
+    coverImage: '/images/blog/mcp-server-cover.jpg', // Dubai cityscape with fog
     published: true
   }
   // Add more blog posts here

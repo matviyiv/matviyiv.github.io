@@ -76,6 +76,23 @@ function BlogPost() {
               </p>
             )}
 
+            {/* Cover Image - Lazy loaded, 80% width */}
+            {post.coverImage && (
+              <div className="my-8 flex justify-center">
+                <img
+                  src={post.coverImage}
+                  alt={post.title}
+                  loading="lazy"
+                  decoding="async"
+                  className="w-[80%] h-auto rounded-lg shadow-2xl shadow-cyan-500/20 border border-slate-700/50 object-cover"
+                  style={{
+                    contentVisibility: 'auto',
+                    willChange: 'auto'
+                  }}
+                />
+              </div>
+            )}
+
             {/* Meta Info */}
             <div className="flex flex-wrap items-center gap-6 text-sm text-slate-400 pb-8 border-b border-slate-700/50">
               {post.author && (

@@ -156,6 +156,27 @@ code {
   color: var(--text-secondary);
 }
 
+/* Blog cover image optimization */
+.blog-content img,
+article img[loading="lazy"] {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 400px; /* Reserve space to prevent layout shift */
+}
+
+/* Smooth fade-in for lazy loaded images */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+img[loading="lazy"] {
+  animation: fadeIn 0.3s ease-in;
+}
+
 .blog-content h2 {
   margin-top: 3rem;
   margin-bottom: 1.5rem;
