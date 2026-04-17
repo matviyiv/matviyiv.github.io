@@ -48,3 +48,46 @@ Color palette: `slate-950` background, `cyan-400` primary accent, `blue-400` sec
 
 ### `AnimatedSection`
 Wrap any section in `<AnimatedSection>` for scroll-triggered fade-in. Used in Resume sections, Articles list, and blog post headers — do not wrap blog post *body* content (causes visibility bugs).
+
+## Blog post writing style
+
+Posts are written in first-person, personal voice. The author is a practitioner sharing what they actually built and what went wrong — not a teacher presenting a clean tutorial.
+
+### Narrative structure
+
+Every post follows this arc:
+
+1. **Opening paragraph** (`text-xl text-slate-400`) — 2–3 sentences. State what was built, name the constraint or twist that made it interesting ("but taking it fully local", "give teams a third option"). Never start with background theory.
+2. **GitHub link card** — immediately after the opening, always.
+3. **The Problem** — a real, specific problem the author faced. Concrete, not hypothetical. Show what the bad options are before presenting the solution.
+4. **Core concept** — explain the idea in plain terms before any implementation detail.
+5. **Implementation / How it works** — specific steps, real config values, actual code. Numbers matter: "50,000 tokens", "512 MB", "6 checks".
+6. **The hard part** — a section on obstacles, gotchas, or failure modes encountered. This is not optional. ("The hard way", "⚠️ Overheating Warning!"). Admitting what didn't work is part of the voice.
+7. **Takeaways / Lessons Learned** — concrete, opinionated bullet points. Each one names the principle and then justifies it in one sentence.
+8. **Closing paragraph** — measured, no hype. Ends with a conditional recommendation ("worth trying", "I highly recommend… if…"), not a sales pitch.
+
+### Voice and language
+
+- Short declarative sentences for emphasis: "No cloud services, no API calls, complete privacy."
+- Em-dash for contrast or an aside: "— not just a matter of discipline"
+- Specific numbers everywhere — vague claims ("much faster") are avoided
+- Honest about trade-offs and failures; never implies everything worked first try
+- No marketing adjectives ("powerful", "amazing", "cutting-edge") — let the specifics do the work
+- "Here's what X looks like" and "Here's why" are natural transitions; use them
+
+### JSX formatting conventions for post content
+
+| Element | Classes |
+|---|---|
+| Opening paragraph | `text-xl text-slate-400 leading-relaxed mb-8` |
+| H2 section heading | `text-3xl font-bold text-cyan-400 mt-12 mb-6` |
+| H3 sub-heading | `text-2xl font-semibold text-blue-400 mt-8 mb-4` |
+| Body paragraph | `mb-6` |
+| Warning / alert card | `bg-red-900/20 border border-red-500/30 rounded-lg p-6 mb-8` |
+| Positive callout / summary card | `bg-gradient-to-r from-cyan-900/20 to-blue-900/20 border border-cyan-500/30 rounded-lg p-6 mb-8` |
+| Bullet list card | `bg-slate-800/50 border border-cyan-500/30 rounded-lg p-6 mb-8` |
+| Bullet icon | `▹` in `text-cyan-400` |
+| Lessons / tips (left-border style) | `border-l-4 border-cyan-500 pl-6 py-2` (rotate accent color per item: cyan → blue → purple → pink) |
+| Code block | `bg-slate-900 border border-slate-700 rounded-lg p-6 mb-8 overflow-x-auto` with optional filename label in `text-slate-500 text-xs mb-3` |
+| Inline code | `text-cyan-300 bg-slate-800 px-1.5 py-0.5 rounded` |
+| ASCII diagram block | `bg-gradient-to-r from-blue-900/20 to-purple-900/20 border border-blue-500/30 rounded-lg p-8 mb-8 font-mono text-sm` |
