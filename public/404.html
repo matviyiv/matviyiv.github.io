@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Nazar Matviyiv</title>
+    <script>
+      // Redirect all 404s back to index.html, preserving the path as a query param.
+      // Decoded in index.html before React mounts.
+      // pathSegmentsToKeep=0 because the site is served from the domain root.
+      var l = window.location;
+      l.replace(
+        l.protocol + '//' + l.host + '/?/' +
+        l.pathname.slice(1).replace(/&/g, '~and~') +
+        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+        l.hash
+      );
+    </script>
+  </head>
+  <body></body>
+</html>
