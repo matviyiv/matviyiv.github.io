@@ -7,10 +7,12 @@ import AnimatedSection from '../components/AnimatedSection';
 
 // Import blog post content
 import McpServerLocalLlm from '../posts/mcp-server-local-llm';
+import RedBlueSecureAiCodeReview from '../posts/redblue-secure-ai-code-review';
 
 // Map of slug to content component
 const postContent = {
-  'mcp-server-local-llm': McpServerLocalLlm
+  'mcp-server-local-llm': McpServerLocalLlm,
+  'redblue-secure-ai-code-review': RedBlueSecureAiCodeReview
 };
 
 function BlogPost() {
