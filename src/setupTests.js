@@ -4,6 +4,11 @@
 // learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom';
 
+// React Router v7 uses TextEncoder/TextDecoder which jsdom doesn't expose globally.
+const { TextEncoder, TextDecoder } = require('util');
+global.TextEncoder = TextEncoder;
+global.TextDecoder = TextDecoder;
+
 // Mock IntersectionObserver for AnimatedSection tests
 global.IntersectionObserver = class IntersectionObserver {
   constructor() {}
