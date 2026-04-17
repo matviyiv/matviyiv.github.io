@@ -10,6 +10,7 @@ const blogPosts = [
     readTime: 10,
     tags: ['Docker', 'Security', 'React Native', 'Claude', 'AI', 'DevOps'],
     excerpt: 'How I built a Red Zone / Blue Zone workflow that lets Claude review a React Native codebase without ever seeing secrets, signing certificates, or internal API endpoints. Includes rsync filtering, secret scanning, Docker isolation, and a full GitLab CI pipeline.',
+    coverImage: '/images/blog/redblue-docker-isolation.jpg',
     published: true
   },
   {
