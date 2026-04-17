@@ -1,6 +1,18 @@
 // Blog posts data - add new posts here
 const blogPosts = [
   {
+    id: 2,
+    slug: 'redblue-secure-ai-code-review',
+    title: 'RedBlue: Secure AI Code Review for React Native',
+    subtitle: 'Run Claude Code inside a Docker container that can only see what you allow — no secrets, no signing keys, no internal endpoints',
+    author: 'Nazar Matviyiv',
+    date: '2026-04-17',
+    readTime: 10,
+    tags: ['Docker', 'Security', 'React Native', 'Claude', 'AI', 'DevOps'],
+    excerpt: 'How I built a Red Zone / Blue Zone workflow that lets Claude review a React Native codebase without ever seeing secrets, signing certificates, or internal API endpoints. Includes rsync filtering, secret scanning, Docker isolation, and a full GitLab CI pipeline.',
+    published: true
+  },
+  {
     id: 1,
     slug: 'mcp-server-local-llm',
     title: 'MCP server for local LLM',
@@ -10,7 +22,7 @@ const blogPosts = [
     readTime: 12,
     tags: ['MCP', 'LLM', 'Node.js', 'Redis', 'LMStudio', 'Offline'],
     excerpt: 'How I built a Model Context Protocol server running completely offline with Redis storage, LMStudio, and performance tuning for M2 Mac. Includes real configuration details, overheating warnings, and lessons learned from running a 35B model locally.',
-    coverImage: '/images/blog/mcp-server-cover.jpg', // Dubai cityscape with fog
+    coverImage: '/images/blog/mcp-server-cover.jpg',
     published: true
   }
   // Add more blog posts here
