@@ -8,11 +8,13 @@ import AnimatedSection from '../components/AnimatedSection';
 // Import blog post content
 import McpServerLocalLlm from '../posts/mcp-server-local-llm';
 import RedBlueSecureAiCodeReview from '../posts/redblue-secure-ai-code-review';
+import PlaywrightBlueZoneClaudeCode from '../posts/playwright-blue-zone-claude-code';
 
 // Map of slug to content component
 const postContent = {
   'mcp-server-local-llm': McpServerLocalLlm,
-  'redblue-secure-ai-code-review': RedBlueSecureAiCodeReview
+  'redblue-secure-ai-code-review': RedBlueSecureAiCodeReview,
+  'playwright-blue-zone-claude-code': PlaywrightBlueZoneClaudeCode
 };
 
 function BlogPost() {

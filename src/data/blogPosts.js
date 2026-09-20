@@ -1,6 +1,19 @@
 // Blog posts data - add new posts here
 const blogPosts = [
   {
+    id: 3,
+    slug: 'playwright-blue-zone-claude-code',
+    title: 'Running Playwright Securely for Blue Zone Claude Code',
+    subtitle: 'A dockerized browser in its own sandbox — no blue-zone mounts, no credentials, and a default-deny allowlist between Chromium and the internet',
+    author: 'Nazar Matviyiv',
+    date: '2026-09-20',
+    readTime: 14,
+    tags: ['Playwright', 'MCP', 'Docker', 'Security', 'Claude', 'Browser Automation'],
+    excerpt: 'The blue zone controls what Claude can see; a browser controls where what it sees can go. How I added Playwright MCP to RedBlue as a second, separate sandbox — two internal networks, a devserver alias, generated stubs for red-zone files so webpack actually builds, and the three failures that all reported themselves as "needs authentication".',
+    coverImage: '/images/blog/playwright-blue-zone.jpg',
+    published: true
+  },
+  {
     id: 2,
     slug: 'redblue-secure-ai-code-review',
     title: 'RedBlue: Secure AI Code Review for React Native',
